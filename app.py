@@ -57,7 +57,6 @@ with tab1:
     )
     axes[0].set_title("Rata-rata UKT Dalam Negeri Termurah")
     axes[0].set_xlabel("UKT (Rp)")
-    axes[0].set_ylabel("")
     axes[0].xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{int(x):,}".replace(",", ".")))
     # axes[0].tick_params(axis='x', rotation=45)
 
@@ -70,7 +69,6 @@ with tab1:
     )
     axes[1].set_title("Rata-rata UKT Luar Negeri Termurah")
     axes[1].set_xlabel("UKT (Rp)")
-    axes[1].set_ylabel("")
     axes[1].xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{int(x):,}".replace(",", ".")))
     # axes[1].tick_params(axis='x', rotation=45)
 
@@ -150,7 +148,6 @@ with tab1:
     )
     axes[0].set_title("UKT Dalam Negeri")
     axes[0].set_xlabel("UKT (Rp)")
-    axes[0].set_ylabel("")
     axes[0].xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"Rp {int(x):,}".replace(",", ".")))
 
     sns.barplot(
@@ -162,7 +159,6 @@ with tab1:
     )
     axes[1].set_title("UKT Luar Negeri")
     axes[1].set_xlabel("UKT (Rp)")
-    axes[1].set_ylabel("")
     axes[1].xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"Rp {int(x):,}".replace(",", ".")))
 
     plt.tight_layout()
