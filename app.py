@@ -165,6 +165,18 @@ with tab1:
     st.pyplot(fig)
     st.info('Jurusan dengan **biaya UKT dalam negeri terendah** adalah **Sastra Jepang**, **Sastra Inggris**, **Ilmu Gizi**, dan **Ilmu Keperawatan** pada **Universitas Brawijaya** dengan biaya UKT sebesar **Rp. 9.533.550**. Jurusan dengan **biaya UKT luar negeri terendah** adalah **Pendidikan Bahasa Mandarin** pada **Universitas Negeri Surabaya** dengan biaya UKT sebesar **Rp. 11.000.000.**')
 
+
+    st.divider()
+
+    st.subheader('Korelasi Kuota Dengan Biaya UKT')
+    fig, axes = plt.subplots(1, 2, figsize=(10, 6))
+    sns.regplot(data=df, x='UKT_Mahasiswa_Dalam_Negeri', y='Kuota', scatter_kws={"alpha": 0.6}, line_kws={"color": "red"}, ax=axes[0])
+    sns.regplot(data=df, x='UKT_Mahasiswa_Luar_Negeri', y='Kuota', scatter_kws={"alpha": 0.6}, line_kws={"color": "red"}, ax=axes[1])
+
+    plt.tight_layout()
+    st.pyplot(fig)
+    st.info('Banyaknya **kuota** dan besarnya **biaya UKT tidak memiliki korelasi**.')
+
 with tab2:
     rekom_df = df.copy()
     rekom_df['Jurusan_PTN'] = rekom_df['Jurusan'] + " - " + rekom_df['PTN']
@@ -209,3 +221,4 @@ with tab2:
     st.dataframe(
         rekomendasi[['Jurusan_PTN', 'Kuota', 'UKT_Mahasiswa_Dalam_Negeri', 'Skor']].round(2)
     )
+
