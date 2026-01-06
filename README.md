@@ -13,24 +13,28 @@ Proyek ini mengembangkan dashboard interaktif menggunakan **Streamlit** untuk me
 
 ### 1. Program IUP Terbanyak
 ![Universitas Terbanyak](images/visualization/universitas-iup-terbanyak.png)
+
 *Gambar: Visualisasi 10 PTN dengan jumlah jurusan program internasional terbanyak.*
 
 Universitas dengan jurusan IUP terbanyak adalah **Universitas Brawijaya** dan **Universitas Gajah Mada** dengan total **30 jurusan IUP**.
 
 ### 2. Proporsi Kuota Jurusan
 ![Universitas Terbanyak](images/visualization/proporsi-kuota-jurusan.png)
+
 *Gambar: Proporsi 10 kuota jurusan terbesar.*
 
 Jurusan **Manajemen** memiliki proporsi kuota terbesar yaitu **22.4% (440)** dari kuota keseluruhan.
 
 ### 3. Analisis Korelasi Kuota vs Biaya UKT
 ![Analisis Korelasi](images/visualization/korelasi-kuota-ukt.png)
+
 *Gambar: Regression Plot menunjukkan hubungan antara jumlah kuota dengan biaya UKT.*
 
 Berdasarkan analisis visual, ditemukan bahwa **banyaknya kuota dan besarnya biaya UKT tidak memiliki korelasi signifikan**. Hal ini menunjukkan bahwa kapasitas daya tampung tidak menjadi penentu utama dalam penetapan biaya pendidikan program internasional.
 
 ### 4. Sistem Rekomendasi Jurusan
 ![Sistem Rekomendasi](images/visualization/rekomendasi-ptn.png)
+
 *Gambar: Fitur rekomendasi jurusan berbasis slider preferensi (Kuota Besar vs UKT Rendah).*
 
 Sistem rekomendasi ini dibangun bukan untuk menunjukkan tren linier antara Kuota dan UKT, melainkan sebagai alat bantu pengambilan keputusan (Decision Support Tool) untuk membantu pengguna menavigasi variabel-variabel yang tidak berkorelasi guna menemukan jurusan yang paling sesuai dengan profil ekonomi dan target peluang mereka.
