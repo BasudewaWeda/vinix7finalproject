@@ -92,13 +92,12 @@ with tab1:
 
     st.subheader('Proporsi Kuota Jurusan')
     kuota_jurusan = (df.groupby('Jurusan')['Kuota'].sum().sort_values(ascending=False))
-    top_5 = kuota_jurusan.head(5)
-    other_jurusan = kuota_jurusan[5:].sum()
+    top_5 = kuota_jurusan.head(10)
 
     fig, ax = plt.subplots()
     ax.pie(top_5, labels=top_5.index, autopct='%1.1f%%', startangle=140)
     st.pyplot(fig)
-    st.info('Jurusan **Manajemen** memiliki **proporsi kuota terbesar** yaitu **34% (440)** dari kuota keseluruhan.')
+    st.info('Jurusan **Manajemen** memiliki **proporsi kuota terbesar** yaitu **22.4% (440)** dari kuota keseluruhan.')
 
     st.divider()
 
